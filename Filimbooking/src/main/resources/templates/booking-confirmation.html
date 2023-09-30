@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Booking Confirmation</title>
+    <style>
+        /* Add your CSS styles here to format the email content */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .header {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+        /* Add more styles as needed */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Booking Confirmation</h1>
+        </div>
+        <p>Hello <span th:text="${customerName}"></span>,</p>
+        <p>Your booking for the movie <strong th:text="${movieTitle}"></strong> at <strong th:text="${Inmakes Gold Theatre}"></strong> on <strong th:text="${bookingDate}"></strong> at <strong th:text="${bookingTime}"></strong> has been confirmed.</p>
+        <p>Your seat(s): <strong th:text="${seatNumbers}"></strong></p>
+        <p>Thank you for choosing our service. Enjoy the movie!</p>
+    </div>
+</body>
+</html>
