@@ -20,16 +20,17 @@
             padding: 10px;
             text-align: center;
         }
-        /* Add more styles as needed */
+      
     </style>
 </head>
 <body>
-    <div class="container">
+    <!-- Define a constant for the theater name -->
+    <div th:with="theaterName='Inmakes Gold Theatre'" class="container">
         <div class="header">
             <h1>Booking Confirmation</h1>
         </div>
         <p>Hello <span th:text="${customerName}"></span>,</p>
-        <p>Your booking for the movie <strong th:text="${movieTitle}"></strong> at <strong th:text="${Inmakes Gold Theatre}"></strong> on <strong th:text="${bookingDate}"></strong> at <strong th:text="${bookingTime}"></strong> has been confirmed.</p>
+        <p>Your booking for the movie <strong th:text="${movieTitle}"></strong> at <strong th:text="${theaterName}"></strong> on <strong th:text="${bookingDate}"></strong> at <strong th:text="${bookingTime}"></strong> has been confirmed.</p>
         <p>Your seat(s): <strong th:text="${seatNumbers}"></strong></p>
         <p>Thank you for choosing our service. Enjoy the movie!</p>
     </div>
